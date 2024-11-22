@@ -24,3 +24,7 @@ spring:
             - Path=/admin/**
           filters:
             - StripPrefix=1
+        - id: teams
+          uri: lb://football-api
+          predicates:
+            - Path=/football/**
